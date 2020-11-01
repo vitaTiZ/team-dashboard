@@ -7,33 +7,22 @@ export default function About() {
 
   const [data, setData] = React.useState("Loading...")
 
-  const getFromFirestore = async () => {
-    const { docs } = await firebase.firestore()
-    .collection('data')
-    .get()
-    
-    const mappedDocs = docs.map(doc => {
-      return {
-        id: doc.id,
-        ...doc.data()
-      }
-    })
-  
-    return mappedDocs;
-  
-  }
-
-  getFromFirestore().then(res => console.log('>>>>>', res))
-
-  // React.useEffect(() => {
-  //   firebase
-  //     .database()
-  //     .ref("/data")
-  //     .once("value")
-  //     .then(snapshot => {
-  //       setData(snapshot.val())
-  //     })
-  // }, [])
+  React.useEffect(() => {
+    firebase
+      .firestore()
+      .collection('data')
+      .get()
+      .then(docs => {
+        docs.forEach(documentSnapshot => {
+          console.log(`Document found at path: ${documentSnapshot.ref.path}`);
+          setData(JSON.stringify({
+            id: documentSnapshot.id,
+            path: documentSnapshot.ref.path,
+            ...documentSnapshot.data()
+          })) // setting data hook with data()
+        });
+      })
+  }, [])
 
   return (
     <div>
