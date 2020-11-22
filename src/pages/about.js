@@ -1,6 +1,5 @@
 import React from "react"
 import firebase from "gatsby-plugin-firebase"
-import {Test} from "../components/test"
 
 
 export default function About() {
@@ -26,8 +25,8 @@ export default function About() {
 
   return (
     <div>
-      <Test name={data}/>
-      <Test name="ABOUT"/>
+      ABOUT
+      {data}
     </div>
   )
 }
