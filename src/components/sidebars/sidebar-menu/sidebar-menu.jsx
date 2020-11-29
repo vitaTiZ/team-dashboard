@@ -3,18 +3,16 @@ import { FooterSocial } from "../../footer/footer-social/footer-social"
 import { HeaderTitle } from "../../header/header-title/header-title"
 import { MenuItemsList } from "../../lists/menu-items-list/menu-items-list"
 
+import "./sidebar-menu.scss"
+
 export const SidebarMenu = () => {
     return (
-      <div>
-        <header>
+      <div className='sidebar-menu'>
+
           <HeaderTitle />
-        </header>
-        <main>
           <MenuItemsList />
-        </main>
-        <footer>
           <FooterSocial />
-        </footer>
+
       </div>
     )
 }
