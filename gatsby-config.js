@@ -19,6 +19,7 @@ module.exports = {
           firestore: true
         }
       }
-    }
+    },
+    `gatsby-plugin-sass`
   ],
 }
