@@ -8,9 +8,10 @@ export default function Home() {
 
   return (
     <div>
-      <Link to="/about">go to about...</Link>
+      {/* <Link to="/about">go to about...</Link> */}
 
       <SidebarMenu />
+      {/* <HomePage /> */}
 
     </div>
   )

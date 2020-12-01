@@ -9,7 +9,11 @@ export const SidebarMenu = () => {
     return (
       <div className='sidebar-menu'>
 
-          <HeaderTitle />
+          <HeaderTitle
+            logoUrl={'https://via.placeholder.com/50'}
+            title={'SMTProject'}
+            subtitle={'Where code happens...'}
+          />
           <MenuItemsList />
           <FooterSocial />
 
