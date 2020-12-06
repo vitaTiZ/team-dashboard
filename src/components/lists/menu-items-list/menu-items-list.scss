@@ -1,0 +1,33 @@
+
+.items-container {
+
+  margin-top: 48px;
+
+  button {
+    background-color: unset;
+    border: none;
+    width: 100%;
+    outline: none;
+
+    .item-label {
+      border-bottom: 2px solid transparent
+    }
+
+    &:hover {
+      .item-label {
+        border-bottom: 2px solid #ff0066;
+        transition: all ease .4s
+      }
+    }
+  }
+
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 20px;
+    font-size: 20px;
+    margin-top: 12px;
+    color: #9a9b9c;
+  }
+}
