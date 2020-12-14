@@ -2,12 +2,13 @@ import React from "react"
 import { FooterSocial } from "../../footer/footer-social/footer-social"
 import { HeaderTitle } from "../../header/header-title/header-title"
 import { MenuItemsList } from "../../lists/menu-items-list/menu-items-list"
+import 'smtp-webcomponents'
 
 import "./sidebar-menu.scss"
 
 export const SidebarMenu = () => {
 
-		const logoUrl = 'https://via.placeholder.com/50';
+		const logoUrl = 'https://picsum.photos/300/200';
 		const title = 'SMTProject';
 		const subtitle = 'Where code happens';
 
@@ -33,7 +34,7 @@ export const SidebarMenu = () => {
     return (
       <div className='sidebar-menu'>
 
-          <HeaderTitle
+          <wc-header-sidebar
             logoUrl={logoUrl}
             title={title}
             subtitle={subtitle}
